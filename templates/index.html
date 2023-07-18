@@ -13,7 +13,7 @@
     <h1>{{ title }}</h1>
         <ul>
             {% for order in order_list %}
-                <li>Customer: {{ order.customer_name }}, Ordered: {{ order.order_date }}, Game: {{ order.game_title }}, Quantity: {{ order.quantity }}</li>
+                <li><a href="/orders/{{loop.index}}">Customer</a>: {{ order.customer_name }}, Ordered: {{ order.order_date }}, Game: {{ order.game_title }}, Quantity: {{ order.quantity }}</li>
             {% endfor %}
         </ul>
 </body>
