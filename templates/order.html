@@ -12,9 +12,10 @@
 <body>
     <h1>Order: {{ title }}</h1>
         <ul>
-            {% for order details in order %}
-                
-            {% endfor %}
+            <li>Customer: {{ specific_order.customer_name }}</li>
+            <li>Ordered: {{ specific_order.order_date }}</li>
+            <li>Game: {{ specific_order.game_title }}</li>
+            <li>Quatity: {{ specific_order.quantity }}</li>
         </ul>
 </body>
 </html>
