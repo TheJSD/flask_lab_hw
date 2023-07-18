@@ -6,15 +6,20 @@
     <title>{{ title }}</title>
     <link
         rel="stylesheet"
-        href="{{ url_for('static', filename='your_file_name.css') }}"
+        href="{{ url_for('static', filename='style.css') }}"
     />
 </head>
-<body>
+<body class="body">
     <h1>{{ title }}</h1>
-        <ul>
+        <div class="order_box">
+        <ul class="order_list">
             {% for order in order_list %}
                 <li><a href="/orders/{{loop.index}}">Customer</a>: {{ order.customer_name }}, Ordered: {{ order.order_date }}, Game: {{ order.game_title }}, Quantity: {{ order.quantity }}</li>
             {% endfor %}
         </ul>
+        </div>
+        <div class="bear">
+            <img class="rotate" src="https://placebear.com/g/250/250" alt="Bear">
+        </div>
 </body>
 </html>
